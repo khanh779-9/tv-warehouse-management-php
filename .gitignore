@@ -1,0 +1,26 @@
+# Vendor / Dependencies
+backend/vendor/
+frontend/node_modules/
+
+# Environment files
+backend/.env
+frontend/.env
+frontend/.env.local
+backend/.env.backup
+
+# Laravel Storage & Cache
+backend/storage/*.key
+backend/storage/logs/*.log
+backend/public/storage
+backend/bootstrap/cache/*.php
+!backend/bootstrap/cache/.gitignore
+backend/.phpunit.result.cache
+
+# Frontend build
+frontend/dist/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
