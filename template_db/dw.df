@@ -1,0 +1,19 @@
+## Suggested CV bullets
+
+**TV Warehouse Management System — Laravel, React, MySQL**
+
+- Built a multi-warehouse TV distribution system with Laravel REST API, React and MySQL, covering purchasing, dealer/store fulfillment, stock transfers, returns and after-sales warranty workflows.
+- Implemented per-TV serial-number traceability and `On Hand / Reserved / Available` inventory to prevent overselling and preserve unit history from goods receipt through sale and service.
+- Designed transaction-safe inventory flows using MySQL transactions, row-level locking, deterministic lock ordering, negative-stock prevention, weighted-average costing and an auditable stock-movement ledger.
+- Added TV-specific catalog attributes, manager approval flows, warehouse locations, partial goods receipt, return inspection, warranty lookup and business audit logs.
+
+## Interview topics
+
+1. Why aggregate `stocks` and physical `product_serials` must both exist.
+2. Why TV serial uniqueness belongs at database level.
+3. How concurrent dealer orders can oversell without `lockForUpdate()`.
+4. Why reservation changes Reserved but not On Hand.
+5. Why returned TVs should go through quarantine/inspection before restock.
+6. Why a serial-tracked stock count cannot be fixed safely by changing only a numeric balance.
+7. Why approvals and audit logs matter in internal warehouse software.
+8. How the same REST API could later serve a handheld/barcode scanner app.
